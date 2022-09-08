@@ -28,9 +28,13 @@ int main(){
 
 
     cout << "Distributed over how many columns?" << endl;
-    cin >>  c;
+    cin >> c;
 
     display(n);
+    
+    if(isPrime(n)){
+        cout << n;
+    }
 
     cout << endl;
 
@@ -39,12 +43,24 @@ int main(){
 
 
 void display(int n){
+    //int ct = 1;
+    //int rowCt = 1;
+
     for(int i = 2; i < n; i++)
     if (isPrime(i)){
         cout << i << " ";
     }
-}
 
+    /*
+    while (ct <= n){
+        cout << ct << '\t';
+        if (ct % c == 0){
+            cout << endl;
+        }
+    ct++;
+    }
+    */
+}
 
 bool isPrime(int n){
     bool is_prime = true;
