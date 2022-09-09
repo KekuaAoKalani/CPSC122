@@ -12,7 +12,7 @@ Description: Program illustrates
 #include <iostream>
 using namespace std;
 
-void display(int);
+void display(int,int);
 /*
 function prototype must be delclared before use. Prototype 
 includes return type, function name, parameters type(s).
@@ -30,7 +30,7 @@ int main(){
     cout << "Distributed over how many columns?" << endl;
     cin >> c;
 
-    display(n);
+    display(n , c);
     
     if(isPrime(n)){
         cout << n;
@@ -41,20 +41,28 @@ int main(){
     return 0;
 }
 
+void display(int n, int c){
 
-void display(int n){
-    //int ct = 1;
-    //int rowCt = 1;
+    int ct = 1;
 
-    for(int i = 2; i < n; i++)
-    if (isPrime(i)){
-        cout << i << " ";
+    cout << endl;
+
+    for(int i = 2; i < n; i++){
+        if (isPrime(i)){
+            cout << i << '\t';
+            if (ct % c == 2){
+                cout << endl;
+            }
+            
+        }
     }
-
+    
+    cout << endl;
+    
     /*
-    while (ct <= n){
+    while (ct <= nums){
         cout << ct << '\t';
-        if (ct % c == 0){
+        if (ct % cols == 0){
             cout << endl;
         }
     ct++;
