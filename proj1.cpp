@@ -68,6 +68,10 @@ void display(int n, int c){
     ct++;
     }
     */
+
+   //Honestly I am having a real hard tim figuring out how to do
+   //the columns but my attempt to understanding it is in the
+   //commented out section above.
 }
 
 bool isPrime(int n){
